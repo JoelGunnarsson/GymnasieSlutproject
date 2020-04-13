@@ -34,7 +34,7 @@ class PostsController
 
 
     /**
-     * Visar vyn för att redigera en Post
+     * Visar vyn för att redigera en post
      * @return boolean success
      */
     public function edit()
