@@ -33,17 +33,13 @@ class PostsController
     }
 
 
-    /**
-     * Visar vyn för att redigera en Post
-     * @return boolean success
-     */
+
     public function edit()
 {
     echo "<br>Formulär för att redigera";
 //    var_dump($vars);
 //        TODO hämta från db med modell
 //        TODO visa på skärm med vy
-        return true;
 }
 
 public function update()
