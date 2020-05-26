@@ -2,18 +2,17 @@
 require "../app/bootstrap.php";
 //var_dump($_SERVER);
 
-
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 //    $r->addRoute('GET', '/', 'homeController.php');
 
-    //Visa alla posts
-    $r->addRoute('GET', '/posts', 'PostsController@index');
-    $r->addRoute('GET', '/posts/{id:\d+}[/]', 'PostsController@show');
-    $r->addRoute('GET', '/posts/{id:\d+}/edit[/]', 'PostsController@edit');
-    $r->addRoute('GET', '/posts/{id:\d+}/delete[/]','PostsController@delete');
-    $r->addRoute('POST','/posts/{id:\d+}[/]', 'PostsController@update');
-    $r->addRoute('GET', '/posts/new[/]', 'PostsController@add');
-    $r->addRoute('POST','/posts/new[/]', 'PostsController@store');
+    //Visa alla info
+    $r->addRoute('GET', '/info', 'Controller@index');
+//    $r->addRoute('GET', '/info/{id:\d+}[/]', 'Controller@show');
+//    $r->addRoute('GET', '/info/{id:\d+}/edit[/]', 'Controller@edit');
+//    $r->addRoute('GET', '/info/{id:\d+}/delete[/]','Controller@delete');
+//    $r->addRoute('POST','/info/{id:\d+}[/]', 'Controller@update');
+//    $r->addRoute('GET', '/info/new[/]', 'Controller@add');
+//    $r->addRoute('POST','/info/new[/]', 'Controller@store');
 
 //    // {id} must be a number (\d+)
 //    $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');

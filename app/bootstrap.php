@@ -43,6 +43,6 @@ function view(string $dir, string $view, array $data)
 {
     $loader = new \Twig\Loader\FilesystemLoader(VIEWS . DIRECTORY_SEPARATOR . $dir);
     $twig = new \Twig\Environment($loader, []);
-    $template = $twig->load($view . '.html.twig');
+    $template = $twig->load($view . '.html');
     echo $template->render($data);
 }
