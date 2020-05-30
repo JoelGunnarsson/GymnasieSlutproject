@@ -5,8 +5,9 @@ require "../app/bootstrap.php";
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 //    $r->addRoute('GET', '/', 'homeController.php');
 
-    //Visa alla info
+//    Show all info
     $r->addRoute('GET', '/info', 'Controller@index');
+    $r->addRoute('GET', '/programmes', 'Controller@programmes');
 //    $r->addRoute('GET', '/info/{id:\d+}[/]', 'Controller@show');
 //    $r->addRoute('GET', '/info/{id:\d+}/edit[/]', 'Controller@edit');
 //    $r->addRoute('GET', '/info/{id:\d+}/delete[/]','Controller@delete');
@@ -34,12 +35,12 @@ $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
         // ... 404 Not Found
-        echo "404 hittades inte";
+        echo "404 Not Found";
         break;
     case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
         $allowedMethods = $routeInfo[1];
         // ... 405 Method Not Allowed
-        echo "Rutt hittad men fel protokoll";
+        echo "Route found but wrong protocol";
         break;
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];

@@ -1,0 +1,17 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gymnasiemässa</title>
+</head>
+<body>
+<h1>Programm</h1>
+
+{% for item in data %}
+<p>{{ item.name|e }}</p>
+{% endfor %}
+
+</body>
+</html>
